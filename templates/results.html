@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+  <title>Love Your Leftovers</title>
+</head>
+
+<body>
+  <h1>Here are your recipes!</h1>
+  <h3> This website helps you make meals from your leftovers </h3>
+  {# The recipes can be found under the key "recipes" in the results dictionary
+   # we got from API. The individual recipes themselves are in turn stored in
+   # a list, so in order to print out their name and the image, I am using a for loop here to
+   # go through each recipe in the list to print them all out.
+   #}
+  {% for recipe in results['recipes'] %}
+    <h3>{{ recipe['title'] }}</h3>
+    <img src="{{ recipe['image_url']}}">
+  {% endfor %}
+
+</body>
+</html>
