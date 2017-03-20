@@ -1,29 +1,24 @@
 <!doctype html>
-<title>Hello from Flask</title>
-
-{% if name and bye %}
-    <h1>Goodbye {{name}}!
-{% else %}
-</h1>
-{% endif %}
+<title>Love Your Leftovers</title>
 
 
 {% if name %}
-    <h1>Welcome to Love Your Leftovers!</h1>
 {% else %}
-    <h1>Welcome to Love Your Leftovers!</h1>
+        <h1>Welcome to Love Your Leftovers!</h1>
 {% endif %}
+<body>
+        <h3> This website helps you make meals from your leftovers </h3>
 
 
-<div id="contact-form">
-    <h1>Search your leftovers!</h1>
-    <form method="post" action="/signup">
+<div id="search-food">
+    <h4>Search your leftovers!</h4>
+    <form method="post" action="/search">
         <label for="ingredient">First Ingredient </label>
         <input type="text" id="first ingredient" name="first ingredient" value="" placeholder="
         First ingredient here" required="required" autofocus="autofocus" />
         <label for="ingredient">Second ingredient </label>
         <input type="text" id="second ingredient" name="second ingredient" value="" placeholder="
-        Second ingredient here" required="required" autofocus="autofocus" />
+        Second ingredient here"  autofocus="autofocus" />
         <input type="submit" value="Submit" id="submit-button" />
     </form>
 </div>
