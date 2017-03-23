@@ -1,1 +1,1 @@
-web: python leftovers.py
+web: python [leftovers.py]
