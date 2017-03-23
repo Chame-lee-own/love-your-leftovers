@@ -1,14 +1,28 @@
 <!doctype html>
+<style>
+body {
+  text-align: center;
+  background: beige;
+  color: black;
+  font-family: helvetica;
+}
+
+</style>
+
 <title>Love Your Leftovers</title>
 
-{% if name %}
-{% else %}
-        <h1>Here are your recipes!</h1>
-{% endif %}
 <body>
-        <h3> This website helps you make meals from your leftovers </h3>
 
-<p>{{ results[''] }}</p>
+<img src="{{ url_for('static', filename='logo2.png') }}" alt="logo" height="250", width="350">
+
+    <h1><u>Here are your recipes!</u></h1>
+
+    <h2>Click the image to go to the recipe!</h2>
+    {% for recipe in results['recipes'] %}
+        <h3>{{ recipe['title'] }}</h3>
+        <a href="{{ recipe['source_url']}}"> <img src="{{ recipe['image_url']}}">
+        </a>
+    {% endfor %}
 
 </body>
 </html>
