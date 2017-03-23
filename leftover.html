@@ -4,21 +4,55 @@
 
 {% if name %}
 {% else %}
-        <h1>Welcome to Love Your Leftovers!</h1>
+<style>
+h1{
+  font-size: 42px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 28px;
+}
+body {
+  background: url(http://confectionsofacottonpickinqueen.com/wp-content/uploads/2014/06/Dollarphotoclub_540377071.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: helvetica;
+  colour: white;
+}
+input {
+  border: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+</style>
+        <h1 style="text-align:center">Welcome to Love Your Leftovers!</h1>
+
+
 {% endif %}
-<body>
-        <h3> This website helps you make meals from your leftovers </h3>
+<body style="text-align:center">
+        <h3> Created by Zoe King and Camille Lee-Own </h2>
+        <h4> This website helps you make meals from your leftovers </h3>
+        <h4>With thanks to <a href="https://www.food2fork.com">food2fork.com</a> for their recipe links! </h4>
+
 
 
 <div id="search-food">
     <h4>Search your leftovers!</h4>
     <form method="post" action="/search">
         <label for="ingredient">First Ingredient </label>
-        <input type="text" id="first ingredient" name="first ingredient" value="" placeholder="
+        <input type="text" id="first_ingredient" name="first_ingredient" value="" placeholder="
         First ingredient here" required="required" autofocus="autofocus" />
         <label for="ingredient">Second ingredient </label>
-        <input type="text" id="second ingredient" name="second ingredient" value="" placeholder="
+        <input type="text" id="second_ingredient" name="second_ingredient" value="" placeholder="
         Second ingredient here"  autofocus="autofocus" />
+        <label for="ingredient">Third ingredient </label>
+        <input type="text" id="third_ingredient" name="third_ingredient" value="" placeholder="
+        Third ingredient here" autofocus="autofocues" />
         <input type="submit" value="Submit" id="submit-button" />
     </form>
 </div>
